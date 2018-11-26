@@ -78,9 +78,9 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "Comments", "LISP Library for AutoCAD"
+            VALUE "Comments", "LISP Library for CAD"
             VALUE "CompanyName", "Robert McNeel & Associates"
-            VALUE "FileDescription", "LISP Library for AutoCAD"
+            VALUE "FileDescription", "LISP Library for CAD"
             VALUE "FileVersion", "9.0.3.0"
             VALUE "InternalName", "DOSLib"
             VALUE "LegalCopyright", "Copyright © 1992-2018 Robert McNeel & Associates"
