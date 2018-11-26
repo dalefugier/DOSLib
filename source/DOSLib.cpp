@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DOSLib.cpp
 //
-// Copyright © 1992-2015 Robert McNeel & Associates. All rights reserved.
+// Copyright © 1992-2018, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.

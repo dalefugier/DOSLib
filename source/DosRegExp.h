@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DosRegExp.h
 //
-// Copyright © 1992-2012 Robert McNeel & Associates. All rights reserved.
+// Copyright © 1992-2018, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Assoicates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.

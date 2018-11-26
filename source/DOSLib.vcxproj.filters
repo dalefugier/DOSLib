@@ -431,6 +431,9 @@
     <ClInclude Include="ArxVer.h">
       <Filter>Include Files</Filter>
     </ClInclude>
+    <ClInclude Include="DosRegExp.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Res\buddy.bmp">

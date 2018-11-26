@@ -3120,6 +3120,7 @@
     <ClInclude Include="DosPropList.h" />
     <ClInclude Include="DosPropListDialog.h" />
     <ClInclude Include="DosReadDir.h" />
+    <ClInclude Include="DosRegExp.h" />
     <ClInclude Include="DosRelativePaths.h" />
     <ClInclude Include="DosScreenImage.h" />
     <ClInclude Include="DosScreenSelectionDialog.h" />
