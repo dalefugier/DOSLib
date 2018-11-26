@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e1f13303-df1d-412e-996b-c5f79c00e344}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;idl;odl</Extensions>
+    </Filter>
+    <Filter Include="Include Files">
+      <UniqueIdentifier>{9150082d-ab41-43ec-b51b-35dbab2caac2}</UniqueIdentifier>
+      <Extensions>h;hh;hxx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{d6c150ef-ba12-4f17-a04c-ff860ddbd089}</UniqueIdentifier>
+      <Extensions>rc;ico;bmp;cur;jpg;gif</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DosAboutDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosAdsHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosCheckListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosColorDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosColorListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosComboListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosDragListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosDualListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosDwgPreviewDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosEditBoxDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosEditListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosFileDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosFileMerge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosFileOperation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosFolderDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGetCancelDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGetDateDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGetIntDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGetProgressDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGetPwdDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGetRealDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGetStringDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosGlyphButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosHtmlDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosHtmlDialogEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosInPlaceCtrls.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosInterDragListBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosLayerListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOSLib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOSLibApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosListBoxDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosListBoxEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosLoadLibrary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosMath.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosMemDC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosMessageBox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosMessageDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosMultiListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosOrderListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosPathString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosPopupMenu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosProcessHelpers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosProgressCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosPropList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosPropListDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosReadDir.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosRelativePaths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosScreenImage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosScreenSelectionDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosSplash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosStaticLink.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosString.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosStringArray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosUnicodeTextFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosVersionInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_autocad.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_config.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_crc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_dialogs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_drives.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_encrypt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_files.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_folders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_getfiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_math.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_modeless.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_paths.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_printers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_processes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_strings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_systems.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="func_tcpip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ToasterWnd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Webbrowser2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosPathMonitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DosRegExp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DosAboutDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosAdsHelpers.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosCheckListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosColorDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosColorListBox.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosComboListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosDragListBox.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosDualListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosDwgPreviewDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosEditBoxDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosEditListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosFileDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosFileMerge.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosFileOperation.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosFolderDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGetCancelDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGetDateDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGetIntDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGetProgressDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGetPwdDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGetRealDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGetStringDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosGlyphButton.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosHtmlDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosHtmlDialogEx.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosInPlaceCtrls.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosInterDragListBox.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosLayerListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSLibApp.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosListBoxDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosListBoxEx.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosLoadLibrary.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosMath.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosMemDC.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosMessageBox.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosMessageDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosMultiListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosOrderListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosPathString.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosPopupMenu.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosProcessHelpers.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosProgressCtrl.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosPropList.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosPropListDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosReadDir.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosRelativePaths.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosScreenImage.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosScreenSelectionDialog.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosSplash.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosStaticLink.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosString.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosStringArray.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosUnicodeTextFile.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosVersionInfo.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ToasterWnd.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Webbrowser2.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DosPathMonitor.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="atlrx.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ArxVer.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Res\buddy.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Res\doslib.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DOSLib.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
