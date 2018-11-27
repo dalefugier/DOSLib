@@ -1,5 +1,4 @@
-# DOSLib
-***LISP Library for CAD Applications***
+# DOSLib: LISP Library for CAD Applications
 
 <img width="160" height="160" src="https://github.com/dalefugier/DOSLib/raw/master/resources/doslib.png">
 
