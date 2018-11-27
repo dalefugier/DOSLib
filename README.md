@@ -35,7 +35,7 @@ The DOSLib build solution looks for ObjectARX and BRX SDK install in this folder
     - 19 // BRXSDK 19
 ```
 
-###Compiling
+### Compiling
 
 - Clone the repository. At a command prompt, enter the following command:
 
