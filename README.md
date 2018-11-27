@@ -48,7 +48,7 @@ git clone https://github.com/dalefugier/doslib
 
 4. Press <kbd>F7</kbd>, or click *Build > Build Solution*  to build the solution.
 
-Note, you can target DOSLib for other versions of AutoCAD as long as:
+Note, you can target DOSLib for other versions of AutoCAD or BricsCAD as long as:
 
 1. The correct ObjectARX or BRXSDK is installed in above mentioned location.
 2. The correct Visual Studio platform toolset is installed.
