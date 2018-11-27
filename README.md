@@ -53,3 +53,9 @@ Note, you can target DOSLib for other versions of AutoCAD as long as:
 1. The correct ObjectARX or BRXSDK installed.
 2. The correct Visual Studio platform toolset is installed.
 
+### More Information
+
+[DOSLib home page](https://wiki.mcneel.com/doslib/home)
+
+### License
+Code licensed under the [MIT License](https://github.com/dalefugier/DOSLib/blob/master/LICENSE).
