@@ -50,7 +50,7 @@ git clone https://github.com/dalefugier/doslib
 
 Note, you can target DOSLib for other versions of AutoCAD as long as:
 
-1. The correct ObjectARX or BRXSDK installed.
+1. The correct ObjectARX or BRXSDK is installed in above mentioned location.
 2. The correct Visual Studio platform toolset is installed.
 
 ### More Information
