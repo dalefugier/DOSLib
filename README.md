@@ -15,7 +15,7 @@ The following tools are required to build DOSLib:
 
 Note, to build DOSLib for version of AutoCAD and/or BricsCAD earlier than what is listed above, you may need an earlier version of Visual Studio. Check the documentation that comes with each of these SDK for their Visual Studio requirement.
 
-The DOSLib build solution looks for ObjectARX and BRX SDK installations in this folder structure:
+The DOSLib build solution looks for ObjectARX and BRXSDK installations in this folder structure:
 
 ```
 \acad
