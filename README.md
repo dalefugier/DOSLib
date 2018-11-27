@@ -9,8 +9,8 @@ This repository contains the source code to DOSLib, a library of LISP-callable f
 The following tools are required to build DOSLib:
 
 - [Microsoft Visual Studio 2017](https://visualstudio.microsoft.com/). Visual Studio 2017 comes in three editions: Community (free), Professional, and Enterprise. All of these editions will work.
-- [ObjectARX for AutoCAD 2019](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx-license-download).
-- [BRX (BricsCAD Runtime eXtension) SDK for BricsCAD V19](https://www.bricsys.com/en-eu/applications/developers/).
+- [ObjectARX SDK for AutoCAD 2019](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx-license-download).
+- [BRX SDK for BricsCAD V19](https://www.bricsys.com/en-eu/applications/developers/).
 
 Note, to build DOSLib for version of AutoCAD and/or BricsCAD earlier than what is listed above, you may need an earlier version of Visual Studio. Check the documentation that comes with each of these SDK for their Visual Studio requirement.
 
