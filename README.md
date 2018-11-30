@@ -2,7 +2,7 @@
 
 <img width="128" height="128" src="https://github.com/dalefugier/DOSLib/raw/master/resources/doslib.png">
 
-This repository contains the source code to DOSLib, a library of LISP-callable functions that provide functionality not available in CAD-LISP interpreters, such as those included with AutoCAD and BricsCAD.
+This repository contains the source code to DOSLib, a library of LISP-callable functions that provide functionality not available in CAD-base LISP interpreters, such as those included with AutoCAD and BricsCAD.
 
 ## Prerequisites
 
