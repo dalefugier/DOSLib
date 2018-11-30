@@ -37,15 +37,11 @@ The DOSLib build solution looks for ObjectARX and BRXSDK installations in this f
 ### Compiling
 
 1. Clone the repository. At a command prompt, enter the following command:
-
 ```
 git clone https://github.com/dalefugier/doslib
 ```
-
 2. Open the `DOSLib.sln` solution file, found in the `doslib\source` folder, in Visual Studio.
-
 3. Select either the `Release_ARX23` or `Release_BRX19` solution configuration.
-
 4. Press <kbd>F7</kbd>, or click *Build > Build Solution*  to build the solution.
 
 Note, you can target DOSLib for other versions of AutoCAD or BricsCAD as long as:
