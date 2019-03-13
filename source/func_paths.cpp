@@ -634,3 +634,51 @@ int CDOSLibApp::ads_dos_ispathslow()
 
   return RSRSLT;
 }
+
+////////////////////////////////////////////////////////////////
+// dos_expandenv
+int CDOSLibApp::ads_dos_expandenv()
+{
+  CAdsArgs args;
+
+  CDosPathString strPath;
+  if (!args.GetPathString(strPath))
+    return RSERR;
+
+  DWORD dwLength = ExpandEnvironmentStrings(strPath, nullptr, 0);
+  if (dwLength > 0)
+  {
+    CString strResult;
+    wchar_t* pszResult = strResult.GetBufferSetLength(dwLength + 1);
+    DWORD dwCount = ExpandEnvironmentStrings(strPath, pszResult, dwLength + 1);
+    strResult.ReleaseBuffer();
+    if (dwCount == dwLength)
+      acedRetStr(strResult);
+  }
+  else
+    acedRetStr(strPath);
+
+  return RSRSLT;
+}
+
+////////////////////////////////////////////////////////////////
+// dos_unexpandenv
+int CDOSLibApp::ads_dos_unexpandenv()
+{
+  CAdsArgs args;
+
+  CDosPathString strPath;
+  if (!args.GetPathString(strPath))
+    return RSERR;
+
+  CString strResult;
+  wchar_t* pszResult = strResult.GetBufferSetLength(MAX_PATH);
+  BOOL rc = PathUnExpandEnvStringsW(strPath, pszResult, MAX_PATH);
+  strResult.ReleaseBuffer();
+  if (rc)
+    acedRetStr(strResult);
+  else
+    acedRetStr(strPath);
+
+  return RSRSLT;
+}

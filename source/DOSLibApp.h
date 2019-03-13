@@ -91,6 +91,8 @@ public:
   static int ads_dos_ispathnetwork();
   static int ads_dos_ispathslow();
   static int ads_dos_localpath();
+  static int ads_dos_expandenv();
+  static int ads_dos_unexpandenv();
 
   // Folder functions
   static int ads_dos_chdir();
