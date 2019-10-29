@@ -10,7 +10,7 @@ The following tools are required to build DOSLib:
 
 - [Microsoft Visual Studio 2017](https://visualstudio.microsoft.com/). Visual Studio 2017 comes in three editions: Community (free), Professional, and Enterprise. All of these editions will work.
 - [ObjectARX SDK for AutoCAD 2019](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx-license-download).
-- [BRX SDK for BricsCAD V19](https://www.bricsys.com/en-eu/applications/developers/).
+- [BRX SDK for BricsCAD V20](https://www.bricsys.com/en-eu/applications/developers/).
 
 Note, to build DOSLib for version of AutoCAD and/or BricsCAD earlier than what is listed above may also require an earlier version of Visual Studio. Check the documentation that comes with each of these SDK for their Visual Studio requirement.
 
@@ -32,6 +32,7 @@ The DOSLib build solution looks for ObjectARX and BRXSDK installations in this f
     \17    - BRXSDK for BricsCAD Pro V17 
     \18    - BRXSDK for BricsCAD Pro V18 
     \19    - BRXSDK for BricsCAD Pro V19 
+    \20    - BRXSDK for BricsCAD Pro V20
 ```
 
 ### Compiling
@@ -41,7 +42,7 @@ The DOSLib build solution looks for ObjectARX and BRXSDK installations in this f
 git clone https://github.com/dalefugier/doslib
 ```
 2. Open the `DOSLib.sln` solution file, found in the `doslib\source` folder, in Visual Studio.
-3. Select either the `Release_ARX23` or `Release_BRX19` solution configuration.
+3. Select either the `Release_ARX23` or `Release_BRX20` solution configuration.
 4. Press <kbd>F7</kbd>, or click *Build > Build Solution*  to build the solution.
 
 Note, you can target DOSLib for other versions of AutoCAD or BricsCAD as long as:

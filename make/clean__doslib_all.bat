@@ -60,4 +60,9 @@ call make_doslib.bat Release_BRX19 Win32 clean %1 %2 %3 %4 %5 %6
 call make_doslib.bat Debug_BRX19 x64 clean %1 %2 %3 %4 %5 %6
 call make_doslib.bat Release_BRX19 x64 clean %1 %2 %3 %4 %5 %6
 
+call make_doslib.bat Debug_BRX20 Win32 clean %1 %2 %3 %4 %5 %6
+call make_doslib.bat Release_BRX20 Win32 clean %1 %2 %3 %4 %5 %6
+call make_doslib.bat Debug_BRX20 x64 clean %1 %2 %3 %4 %5 %6
+call make_doslib.bat Release_BRX20 x64 clean %1 %2 %3 %4 %5 %6
+
 del /F /Q ..\bin\*.*
