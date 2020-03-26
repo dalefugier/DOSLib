@@ -14,7 +14,7 @@
 #include "DosLayerListDialog.h"
 #include "DosStringArray.h"
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(BRX19)  || defined(BRX20)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(BRX19)  || defined(BRX20)
 extern int acdbSetDbmod(class AcDbDatabase* pDb, int newVal);
 #else
 extern long acdbSetDbmod(class AcDbDatabase* pDb, long newVal);
@@ -22,25 +22,26 @@ extern long acdbSetDbmod(class AcDbDatabase* pDb, long newVal);
 
 using namespace Gdiplus;
 
-static int GetEncoderClsid(const WCHAR* format, CLSID* pClsid)
+static int GetEncoderClsid(const wchar_t* pFormat, CLSID* pClsid)
 {
-  UINT num = 0;  // number of image encoders
-  UINT size = 0; // size of the image encoder array in bytes
-
-  GetImageEncodersSize(&num, &size);
-  if (size == 0)
+  if (nullptr == pFormat || nullptr == pClsid)
     return -1;
 
-  ImageCodecInfo* pImageCodecInfo = (ImageCodecInfo*)(malloc(size));
-  if (pImageCodecInfo == NULL)
+  unsigned int count = 0;  // number of image encoders
+  unsigned int size = 0;   // size of the image encoder array in bytes
+  GetImageEncodersSize(&count, &size);
+  if (0 == size)
     return -1;
 
-  GetImageEncoders(num, size, pImageCodecInfo);
+  ImageCodecInfo* pImageCodecInfo = (ImageCodecInfo*)malloc(size);
+  if (nullptr == pImageCodecInfo)
+    return -1;
 
-  UINT i;
-  for (i = 0; i < num; ++i)
+  GetImageEncoders(count, size, pImageCodecInfo);
+
+  for (unsigned int i = 0; i < count; ++i)
   {
-    if (wcscmp(pImageCodecInfo[i].MimeType, format) == 0)
+    if (wcscmp(pImageCodecInfo[i].MimeType, pFormat) == 0)
     {
       *pClsid = pImageCodecInfo[i].Clsid;
       free(pImageCodecInfo);
@@ -824,7 +825,7 @@ int CDOSLibApp::ads_dos_xreflist()
   bool bReadOnly = false;
   AcDbDatabase db(Adesk::kFalse);
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24)
   Acad::ErrorStatus es = db.readDwgFile(strPath, AcDbDatabase::kForReadAndReadShare, false);
 #else
   Acad::ErrorStatus es = db.readDwgFile(strPath, _SH_DENYWR, false);
@@ -846,7 +847,7 @@ int CDOSLibApp::ads_dos_xreflist()
         return RSRSLT;
       }
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24)
       es = db.readDwgFile(tchTempName, AcDbDatabase::kForReadAndReadShare, false);
 #else
       es = db.readDwgFile(tchTempName, _SH_DENYWR, false);
@@ -1926,7 +1927,7 @@ int CDOSLibApp::ads_dos_hatcharea()
   for (i = 0; i < loop_count; i++)
   {
     double area = 0.0;
-#if defined(ARX21) || defined(ARX22) || defined(ARX23)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24)
     Adesk::Int32 loopType = 0;
 #else
     long loopType = 0;
@@ -2005,7 +2006,7 @@ ACHAR* g_result = 0; // global result
 int g_length = 0;    // global result length
 int g_cronly = 0;    // global cronly
 
-#if defined(ARX23)
+#if defined(ARX23) || defined(ARX24)
 static bool MessageFilter(MSG* pMsg)
 #else
 static BOOL MessageFilter(MSG* pMsg)

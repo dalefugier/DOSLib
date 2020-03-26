@@ -11,24 +11,6 @@
 
 #pragma once
 
-/*
-#if (_MSC_VER == 1600)        // Visual Studio 2010
-#define ARX19
-#define BRX13
-#define BRX14
-#define BRX15
-#elif (_MSC_VER == 1700)      // Visual Studio 2012
-#define ARX20
-#elif (_MSC_VER == 1800)      // Visual Studio 2013
-#define BRX16
-#define BRX17
-#define BRX18
-#elif (_MSC_VER == 1900)      // Visual Studio 2015
-#define ARX21
-#define ARX22
-#endif
-*/
-
 #if defined(ARX19)
 #define _ARX_VER 19
 #elif defined(ARX20)
@@ -39,6 +21,8 @@
 #define _ARX_VER 22
 #elif defined(ARX23)
 #define _ARX_VER 23
+#elif defined(ARX24)
+#define _ARX_VER 24
 #else
 #define _ARX_VER 0
 #endif
