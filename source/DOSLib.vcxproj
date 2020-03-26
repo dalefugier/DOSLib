@@ -117,7 +117,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}</ProjectGuid>
     <RootNamespace>DOSLib</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|x64'" Label="Configuration">
