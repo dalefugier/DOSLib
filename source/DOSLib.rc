@@ -62,8 +62,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 9,0,3,0
- PRODUCTVERSION 9,0,3,0
+ FILEVERSION 9,1,0,0
+ PRODUCTVERSION 9,1,0,0
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -81,12 +81,12 @@ BEGIN
             VALUE "Comments", "LISP Library for CAD"
             VALUE "CompanyName", "Robert McNeel & Associates"
             VALUE "FileDescription", "LISP Library for CAD"
-            VALUE "FileVersion", "9.0.3.0"
+            VALUE "FileVersion", "9.1.0.0"
             VALUE "InternalName", "DOSLib"
             VALUE "LegalCopyright", "Copyright © 1992-2020 Robert McNeel & Associates"
             VALUE "OriginalFilename", "DOSLib.arx"
             VALUE "ProductName", "DOSLib"
-            VALUE "ProductVersion", "9.0.3.0"
+            VALUE "ProductVersion", "9.1.0.0"
         END
     END
     BLOCK "VarFileInfo"

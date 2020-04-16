@@ -31,9 +31,9 @@ CDOSLibApp::CDOSLibApp()
 {
   m_strHelpPath = L"";
   m_nMajorVersion = 9;
-  m_nMinorVersion = 0;
-  m_nServiceRelease = 3;
-  m_strVersion = L"9.0.3";
+  m_nMinorVersion = 1;
+  m_nServiceRelease = 0;
+  m_strVersion = L"9.1.0";
   srand((unsigned)time(0));
 }
 
@@ -112,7 +112,7 @@ const wchar_t* CDOSLibApp::AppVersion() const
 
 const wchar_t* CDOSLibApp::AppCopyright() const
 {
-  return L"Copyright © 1992-2019 Robert McNeel & Associates.";
+  return L"Copyright © 1992-2020 Robert McNeel & Associates.";
 }
 
 int CDOSLibApp::MajorVersion() const
@@ -551,6 +551,8 @@ DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_isacad64, false)
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_tickcount, false)
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_nicinfo, false)
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_printscrn, false)
+DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_asynckeystate, false)
+DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_systemmetrics, false)
 
 // Math functions
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_abs, false)

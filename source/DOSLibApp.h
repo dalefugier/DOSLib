@@ -325,6 +325,8 @@ public:
   static int ads_dos_tickcount();
   static int ads_dos_nicinfo();
   static int ads_dos_printscrn();
+  static int ads_dos_asynckeystate();
+  static int ads_dos_systemmetrics();
 
   // Math functions
   static int ads_dos_abs();

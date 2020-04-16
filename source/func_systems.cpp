@@ -235,7 +235,7 @@ int CDOSLibApp::ads_dos_guidgen()
       guid.Data4[5],
       guid.Data4[6],
       guid.Data4[7]
-      );
+    );
     acedRetStr(str);
   }
 
@@ -573,6 +573,38 @@ int CDOSLibApp::ads_dos_scrolllock()
     SetKeyLockOff(VK_SCROLL);
     acedRetNil();
   }
+
+  return RSRSLT;
+}
+
+////////////////////////////////////////////////////////////////
+// dos_asynckeystate
+int CDOSLibApp::ads_dos_asynckeystate()
+{
+  CAdsArgs args;
+
+  int vKey = 0;
+  if (!args.GetInteger(vKey))
+    return RSERR;
+
+  short sResult = ::GetAsyncKeyState(vKey);
+  acedRetInt((int)sResult);
+
+  return RSRSLT;
+}
+
+////////////////////////////////////////////////////////////////
+// dos_systemmetrics
+int CDOSLibApp::ads_dos_systemmetrics()
+{
+  CAdsArgs args;
+
+  int nIndex = 0;
+  if (!args.GetInteger(nIndex))
+    return RSERR;
+
+  int nResult = ::GetSystemMetrics(nIndex);
+  acedRetInt(nResult);
 
   return RSRSLT;
 }
