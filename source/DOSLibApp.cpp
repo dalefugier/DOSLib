@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DOSLibApp.cpp
 //
-// Copyright © 1992-2018, Robert McNeel & Associates. All rights reserved.
+// Copyright ?1992-2018, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -100,6 +100,8 @@ const wchar_t* CDOSLibApp::AppDescription() const
 {
 #if defined(_BRX)
   return L"LISP Library for BricsCAD";
+#elif defined(_ZRX)
+  return L"LISP Library for ZWCAD";
 #else
   return L"LISP Library for AutoCAD";
 #endif
@@ -112,7 +114,7 @@ const wchar_t* CDOSLibApp::AppVersion() const
 
 const wchar_t* CDOSLibApp::AppCopyright() const
 {
-  return L"Copyright © 1992-2020 Robert McNeel & Associates.";
+  return L"Copyright ?1992-2020 Robert McNeel & Associates.";
 }
 
 int CDOSLibApp::MajorVersion() const
@@ -276,6 +278,11 @@ ACED_ARXCOMMAND_ENTRY_AUTO(CDOSLibApp, RMA_DOSLIB, _DOSLIBHELP, DOSLIBHELP, ACRX
 #define DOS_ADSSYMBOL_ENTRY_AUTO(T_CLASS,T_NAME,T_REGISTERFUNCTION) \
     __declspec(selectany) _AdsRegisteredSymbol __adsRegisteredSymbol_##T_NAME(T_CLASS::ads_ ##T_NAME,ACRX_T(#T_NAME),T_REGISTERFUNCTION); \
     const bool __adsRegisteredFunction_##T_CLASS##T_NAME = __adsRegisteredSymbol_##T_NAME.registerFunction();
+#elif defined(_ZRX)
+#define DOS_ADSSYMBOL_ENTRY_AUTO(classname, name, regFunc) \
+    __declspec(selectany) _ZDSSYMBOL_ENTRY __ZdsSymbolMap_##name = { _RXST(#name), classname::ads_ ##name, regFunc, -1 } ; \
+    extern "C" __declspec(allocate("ZDSSYMBOL$__m")) __declspec(selectany) _ZDSSYMBOL_ENTRY* const __pZdsSymbolMap_##name = &__ZdsSymbolMap_##name ; \
+    ZCED_ZDSSYMBOL_ENTRY_PRAGMA(name)
 #else
 #define DOS_ADSSYMBOL_ENTRY_AUTO(classname, name, regFunc) \
     __declspec(selectany) _ADSSYMBOL_ENTRY __AdsSymbolMap_##name = { _RXST(#name), classname::ads_ ##name, regFunc, (UINT)-1 } ; \
