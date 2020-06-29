@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // ArxVer.h
 //
-// Copyright © 1992-2018, Robert McNeel & Associates. All rights reserved.
+// Copyright ?1992-2018, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -45,4 +45,10 @@
 #define _BRX_VER 20
 #else
 #define _BRX_VER 0
+#endif
+
+#if defined(ZRX20)
+#define _ZRX_VER 20
+#else
+#define _ZRX_VER 0
 #endif

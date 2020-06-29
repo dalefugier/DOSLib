@@ -1295,6 +1295,8 @@ const wchar_t* DOS_PlatformName()
 {
 #if defined(_BRX)
   return L"BricsCAD";
+#elif defined(_ZRX)
+  return L"ZWCAD";
 #else
   return L"AutoCAD";
 #endif

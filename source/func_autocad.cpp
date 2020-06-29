@@ -1927,7 +1927,7 @@ int CDOSLibApp::ads_dos_hatcharea()
   for (i = 0; i < loop_count; i++)
   {
     double area = 0.0;
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ZRX20)
     Adesk::Int32 loopType = 0;
 #else
     long loopType = 0;

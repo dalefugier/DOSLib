@@ -1605,6 +1605,9 @@ int CDOSLibApp::ads_dos_msgboxchk()
   Returns:
     true or false
 */
+#if defined(ZRX20)
+#define acedLinetypeDialog zcedLinetypeDialog
+#endif
 bool __cdecl acedLinetypeDialog(
 class AcDbObjectId old_linetypeId,
   bool bIncludeByBlockByLayer,
