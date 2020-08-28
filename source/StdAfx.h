@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // StdAfx.h
 //
-// Copyright © 1992-2018, Robert McNeel & Associates. All rights reserved.
+// Copyright ?1992-2018, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -100,7 +100,7 @@
 #include <arxHeaders.h>
 #include <dbxHeaders.h>
 
-#if _ARX_VER > 20
+#if _ARX_VER > 20 || _ZRX_VER > 20
 #include <acdbimageutils.h>
 #endif
 

@@ -65,6 +65,14 @@
       <Configuration>Debug_ZRX20</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_ZRX21|Win32">
+      <Configuration>Debug_ZRX21</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_ZRX21|x64">
+      <Configuration>Debug_ZRX21</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release_ARX19|x64">
       <Configuration>Release_ARX19</Configuration>
       <Platform>x64</Platform>
@@ -129,6 +137,14 @@
       <Configuration>Release_ZRX20</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_ZRX21|Win32">
+      <Configuration>Release_ZRX21</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_ZRX21|x64">
+      <Configuration>Release_ZRX21</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}</ProjectGuid>
@@ -148,11 +164,23 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -244,11 +272,23 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -337,7 +377,13 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'" Label="PropertySheets">
@@ -385,7 +431,13 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'" Label="PropertySheets">
@@ -432,6 +484,7 @@
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|x64'">..\bin\Debug\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|x64'">..\bin\Debug\zrx\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">..\bin\Debug\zrx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'">..\bin\Debug\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX21|x64'">..\bin\Debug\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX22|x64'">..\bin\Debug\arx\</OutDir>
@@ -447,7 +500,9 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX18|x64'">..\bin\Debug\brx\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX22|x64'">$(Platform)\$(Configuration)\</IntDir>
@@ -463,7 +518,9 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX18|x64'">$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX22|x64'">true</LinkIncremental>
@@ -479,6 +536,7 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX18|x64'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|x64'">..\bin\Release\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|x64'">..\bin\Release\zrx\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">..\bin\Release\zrx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'">..\bin\Release\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX21|x64'">..\bin\Release\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX22|x64'">..\bin\Release\arx\</OutDir>
@@ -494,7 +552,9 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX18|x64'">..\bin\Release\brx\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX22|x64'">$(Platform)\$(Configuration)\</IntDir>
@@ -510,7 +570,9 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX18|x64'">$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX22|x64'">true</LinkIncremental>
@@ -526,7 +588,9 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX18|x64'">true</LinkIncremental>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|x64'">.zrx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'">.zrx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX21|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX22|x64'">.arx</TargetExt>
@@ -542,7 +606,9 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX18|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|x64'">.zrx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'">.zrx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX21|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX22|x64'">.arx</TargetExt>
@@ -558,7 +624,9 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX18|x64'">.brx</TargetExt>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|x64'">$(ProjectName)19$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|x64'">$(ProjectName)2020$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'">$(ProjectName)20$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'">$(ProjectName)20$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX22|x64'">$(ProjectName)22$(Platform)</TargetName>
@@ -574,7 +642,9 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX18|x64'">$(ProjectName)18$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|x64'">$(ProjectName)19$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|x64'">$(ProjectName)20$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'">$(ProjectName)20$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'">$(ProjectName)20$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX22|x64'">$(ProjectName)22$(Platform)</TargetName>
@@ -591,6 +661,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'">
     <OutDir>..\bin\Debug\zrx\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'">
+    <OutDir>..\bin\Debug\zrx\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'">
+    <OutDir>..\bin\Release\zrx\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'">
+    <OutDir>..\bin\Release\zrx\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|x64'">
     <Midl>
@@ -681,6 +760,51 @@
       </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>\zwcad\zrx\21\arxport;\zwcad\zrx\21\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ZRX;ZRX21;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\zwcad\zrx\21\lib-x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>ZwdUI.lib;ZwAuto.lib;ZWCAD.lib;ZwDatabase.lib;ZwDatabaseMgd.lib;ZwGeometry.lib;ZwRx.lib;ZwUI.lib;ZwZrx.lib;ZwPAL.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'">
     <Midl />
     <ClCompile>
@@ -717,6 +841,48 @@
       </DataExecutionPrevention>
       <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>ZwRx.lib; ZwZrx.lib; ZwDatabase.lib; ZwGeometry.lib; ZWCAD.lib; ZdUI.lib; ZwUI.lib;</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'">
+    <Midl />
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>\zwcad\zrx\21\arxport;\zwcad\zrx\21\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>_WINDOWS;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ZRX;ZRX21;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\zwcad\zrx\21\lib-win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>ZwdUI.lib;ZwAuto.lib;ZWCAD.lib;ZwDatabase.lib;ZwDatabaseMgd.lib;ZwGeometry.lib;ZwRx.lib;ZwUI.lib;ZwZrx.lib;ZwPAL.lib</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -1386,6 +1552,52 @@
       </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>\zwcad\zrx\21\arxport;\zwcad\zrx\21\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;NDEBUG;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ZRX;ZRX21;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\zwcad\zrx\21\lib-x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>ZwdUI.lib;ZwAuto.lib;ZWCAD.lib;ZwDatabase.lib;ZwDatabaseMgd.lib;ZwGeometry.lib;ZwRx.lib;ZwUI.lib;ZwZrx.lib;ZwPAL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'">
     <Midl />
     <ClCompile>
@@ -1423,6 +1635,49 @@
       </DataExecutionPrevention>
       <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
       <AdditionalDependencies>ZwRx.lib;ZwZrx.lib;ZwDatabase.lib;ZwGeometry.lib;ZWCAD.lib;ZdUI.lib;ZwUI.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'">
+    <Midl />
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>\zwcad\zrx\21\arxport;\zwcad\zrx\21\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>_WINDOWS;NDEBUG;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ZRX;ZRX21;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\zwcad\zrx\21\lib-win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>ZwdUI.lib;ZwAuto.lib;ZWCAD.lib;ZwDatabase.lib;ZwDatabaseMgd.lib;ZwGeometry.lib;ZwRx.lib;ZwUI.lib;ZwZrx.lib;ZwPAL.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>
@@ -2093,7 +2348,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX19|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX20|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX20|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX21|x64'">Create</PrecompiledHeader>
@@ -2123,7 +2380,9 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX19|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ZRX20|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX20|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX21|x64'">Create</PrecompiledHeader>

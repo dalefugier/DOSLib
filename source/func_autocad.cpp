@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // func_autocad.cpp
 //
-// Copyright © 1992-2018, Robert McNeel & Associates. All rights reserved.
+// Copyright ?1992-2018, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -1927,7 +1927,7 @@ int CDOSLibApp::ads_dos_hatcharea()
   for (i = 0; i < loop_count; i++)
   {
     double area = 0.0;
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ZRX20)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ZRX20) || defined(ZRX21)
     Adesk::Int32 loopType = 0;
 #else
     long loopType = 0;
@@ -2006,7 +2006,7 @@ ACHAR* g_result = 0; // global result
 int g_length = 0;    // global result length
 int g_cronly = 0;    // global cronly
 
-#if defined(ARX23) || defined(ARX24)
+#if defined(ARX23) || defined(ARX24) || defined(ZRX21)
 static bool MessageFilter(MSG* pMsg)
 #else
 static BOOL MessageFilter(MSG* pMsg)

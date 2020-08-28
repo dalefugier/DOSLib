@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////
 // func_dialogs.cpp
 //
-// Copyright © 1992-2018, Robert McNeel & Associates. All rights reserved.
+// Copyright ?1992-2018, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -1605,7 +1605,7 @@ int CDOSLibApp::ads_dos_msgboxchk()
   Returns:
     true or false
 */
-#if defined(ZRX20)
+#if defined(ZRX20) || defined(ZRX21)
 #define acedLinetypeDialog zcedLinetypeDialog
 #endif
 bool __cdecl acedLinetypeDialog(
