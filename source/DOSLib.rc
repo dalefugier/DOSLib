@@ -83,7 +83,7 @@ BEGIN
             VALUE "FileDescription", "LISP Library for CAD"
             VALUE "FileVersion", "9.1.0.0"
             VALUE "InternalName", "DOSLib"
-            VALUE "LegalCopyright", "Copyright © 1992-2020 Robert McNeel & Associates"
+            VALUE "LegalCopyright", "Copyright (c) 1992-2020 Robert McNeel & Associates"
             VALUE "OriginalFilename", "DOSLib.arx"
             VALUE "ProductName", "DOSLib"
             VALUE "ProductVersion", "9.1.0.0"
@@ -256,7 +256,7 @@ BEGIN
     DEFPUSHBUTTON   "OK",IDOK,98,64,50,14
     ICON            IDI_DOSLIB,IDC_DOSLIBICON,12,12,20,20
     LTEXT           "DOSLib Version 9.0.3",IDC_PRODUCT,48,12,191,8
-    LTEXT           "Copyright © 1992-2017 Robert McNeel & Associates.",IDC_COPYRIGHT,48,24,191,8
+    LTEXT           "Copyright (c) 1992-2017 Robert McNeel & Associates.",IDC_COPYRIGHT,48,24,191,8
     LTEXT           "All Rights Reserved",IDC_STATIC,48,36,191,8
     LTEXT           "https://wiki.mcneel.com/doslib/home",IDC_WEB,48,48,191,8
 END
