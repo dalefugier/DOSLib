@@ -665,7 +665,7 @@ bool CAdsArgs::GetEntityList(AcDbObjectIdArray& arr)
   arr.removeAll();
   if (m_rb && m_rb->restype == RTPICKS)
   {
-#if _ARX_VER > 20
+#if _ARX_VER > 20 || _ZRX_VER > 20
     Adesk::Int32 sslen = 0;
 #else
     long sslen = 0;

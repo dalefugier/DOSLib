@@ -100,7 +100,7 @@
 #include <arxHeaders.h>
 #include <dbxHeaders.h>
 
-#if _ARX_VER > 20
+#if _ARX_VER > 20 || _ZRX_VER > 20
 #include <acdbimageutils.h>
 #endif
 
