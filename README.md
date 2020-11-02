@@ -10,10 +10,10 @@ The following tools are required to build DOSLib:
 
 - [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/). Visual Studio 2019 comes in three editions: Community (free), Professional, and Enterprise. All of these editions will work.
 - [ObjectARX SDK for AutoCAD 2021](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx-license-download).
-- [BRX SDK for BricsCAD V21](https://www.bricsys.com/en-eu/applications/developers/). (Requires Visual Studio 2017*)
-- [ZRX SDK for ZWCAD 2021](https://www.zwsoft.com/zwcad/developer/). (Requires Visual Studio 2017*)
+- [BRX SDK for BricsCAD V21](https://www.bricsys.com/en-eu/applications/developers/). (Requires Visual Studio 2017 *)
+- [ZRX SDK for ZWCAD 2021](https://www.zwsoft.com/zwcad/developer/). (Requires Visual Studio 2017 *)
 
-*When installing Visual Studio 2019, make sure to install the Visual Studio 2017 (v141) C++ x64/x86 build tools, and libraries.
+* When installing Visual Studio 2019, make sure to install the Visual Studio 2017 (v141) C++ x64/x86 build tools, and libraries.
 
 Note, to build DOSLib for version of AutoCAD, BricsCAD and/or ZWCAD earlier than what is listed above may also require an earlier version of Visual Studio. Check the documentation that comes with each of these SDK for their Visual Studio requirement.
 
