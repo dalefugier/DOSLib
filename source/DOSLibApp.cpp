@@ -32,9 +32,9 @@ CDOSLibApp::CDOSLibApp()
   m_strHelpPath = L"";
   m_nMajorVersion = 9;
   m_nMinorVersion = 1;
-  m_nServiceRelease = 0;
-  m_strVersion = L"9.1.0";
-  srand((unsigned)time(0));
+  m_nServiceRelease = 1;
+  m_strVersion.Format(L"%d.%d.%d", m_nMajorVersion, m_nMinorVersion, m_nServiceRelease);
+  srand((unsigned)time(nullptr));
 }
 
 CDOSLibApp::~CDOSLibApp()
@@ -114,7 +114,7 @@ const wchar_t* CDOSLibApp::AppVersion() const
 
 const wchar_t* CDOSLibApp::AppCopyright() const
 {
-  return L"Copyright (c) 1992-2020 Robert McNeel & Associates.";
+  return L"Copyright (c) 1992-2021 Robert McNeel & Associates.";
 }
 
 int CDOSLibApp::MajorVersion() const
@@ -134,7 +134,7 @@ int CDOSLibApp::ServiceRelease() const
 
 const wchar_t* CDOSLibApp::AppInternet() const
 {
-  return L"https://wiki.mcneel.com/doslib/home";
+  return L"https://github.com/dalefugier/DOSLib";
 }
 
 CString CDOSLibApp::AppRegKey()

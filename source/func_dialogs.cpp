@@ -82,23 +82,23 @@ int CDOSLibApp::ads_dos_getint()
     {
       if (!args.GetInteger(n))
         return RSERR;
-
       dlg.SetValue(n);
-      args.Next();
 
+      args.Next();
       if (!args.IsEmpty())
       {
-        if (!args.GetInteger(n))
-          return RSERR;
+        if (!args.IsTrue() && !args.IsNil())
+        {
+          if (!args.GetInteger(n))
+            return RSERR;
+          dlg.SetMax(n);
+        }
 
-        dlg.SetMax(n);
         args.Next();
-
         if (!args.IsEmpty())
         {
           if (!args.GetInteger(n))
             return RSERR;
-
           dlg.SetMin(n);
         }
       }
@@ -169,9 +169,12 @@ int CDOSLibApp::ads_dos_getreal()
 
       if (args.Next())
       {
-        if (!args.GetDouble(d))
-          return RSERR;
-        dlg.SetMax(d);
+        if (!args.IsTrue() && !args.IsNil())
+        {
+          if (!args.GetDouble(d))
+            return RSERR;
+          dlg.SetMax(d);
+        }
 
         if (args.Next())
         {

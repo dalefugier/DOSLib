@@ -24,8 +24,8 @@ CDosGetRealDialog::CDosGetRealDialog(CWnd* pParent)
   m_bAllowNeg = TRUE;
   m_bMin = FALSE;
   m_bMax = FALSE;
-  m_dblMin = 0.0;
-  m_dblMax = 0.0;
+  m_dblMin = DBL_MIN;
+  m_dblMax = DBL_MAX;
 }
 
 void CDosGetRealDialog::DoDataExchange(CDataExchange* pDX)
@@ -109,14 +109,14 @@ void CDosGetRealDialog::OnOK()
 
   if (m_bMin && d < m_dblMin)
   {
-    str.Format(L"Please enter a real number greater than or equal to %.f", m_dblMin);
+    str.Format(L"Please enter a real number greater than or equal to %g.", m_dblMin);
     ErrorMessageBox(str);
     return;
   }
 
   if (m_bMax && d > m_dblMax)
   {
-    str.Format(L"Please enter a real number less than or equal to %.f", m_dblMax);
+    str.Format(L"Please enter a real number less than or equal to %g.", m_dblMax);
     ErrorMessageBox(str);
     return;
   }
