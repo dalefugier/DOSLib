@@ -170,7 +170,9 @@ int CDOSLibApp::ads_dos_getdir()
 
         args.Next();
 
-        if (!args.IsEmpty())
+        // https://github.com/dalefugier/DOSLib/issues/16
+        //if (!args.IsEmpty())
+        if (args.IsTrue())
           bNewFolderButton = true;
       }
     }
