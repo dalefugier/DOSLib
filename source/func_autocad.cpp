@@ -14,7 +14,7 @@
 #include "DosLayerListDialog.h"
 #include "DosStringArray.h"
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(BRX19) || defined(BRX20) || defined(BRX21)
+#if _ARX_VER > 20 || _BRX_VER > 18
 extern int acdbSetDbmod(class AcDbDatabase* pDb, int newVal);
 #else
 extern long acdbSetDbmod(class AcDbDatabase* pDb, long newVal);
