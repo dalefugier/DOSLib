@@ -38,6 +38,7 @@ The DOSLib build solution looks for ObjectARX, BRXSDK and ZRXSDK installations i
     \19    - BRXSDK for BricsCAD Pro V19 
     \20    - BRXSDK for BricsCAD Pro V20
     \21    - BRXSDK for BricsCAD Pro V21
+    \22    - BRXSDK for BricsCAD Pro V22
 \zwcad
   \zrx
     \20    - ZRXSDK for ZWCAD 2018/2019/2020
