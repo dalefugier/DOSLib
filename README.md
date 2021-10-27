@@ -52,7 +52,7 @@ The DOSLib build solution looks for ObjectARX, BRXSDK and ZRXSDK installations i
 git clone https://github.com/dalefugier/doslib
 ```
 2. Open the `DOSLib.sln` solution file, found in the `doslib\source` folder, in Visual Studio.
-3. Select either the `Release_ARX24`, `Release_BRX21` or `Release_ZRX21` solution configuration.
+3. Select either the `Release_ARX24`, `Release_BRX22` or `Release_ZRX21` solution configuration.
 4. Press <kbd>F7</kbd>, or click *Build > Build Solution*  to build the solution.
 
 Note, you can target DOSLib for other versions of AutoCAD, BricsCAD or ZWCAD as long as:
