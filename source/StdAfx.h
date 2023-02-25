@@ -96,6 +96,7 @@
 #include <limits.h>
 #include <float.h>
 #include <stack>
+#include <cmath>
 
 #include <arxHeaders.h>
 #include <dbxHeaders.h>

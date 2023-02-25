@@ -2708,7 +2708,7 @@ int CDOSLibApp::ads_dos_cbrt()
 
   try
   {
-    acedRetNum(cbrt(d));
+    acedRetNum(std::cbrt(d));
   }
   catch (...)
   {
