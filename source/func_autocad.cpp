@@ -2985,33 +2985,17 @@ int CDOSLibApp::ads_dos_plinewinding()
 // dos_acadname
 int CDOSLibApp::ads_dos_acadname()
 {
-#ifdef BRX13
-  const wchar_t* pszKey = acdbHostApplicationServices()->getRegistryProductRootKey();
-#else
-  const wchar_t* pszKey = acdbHostApplicationServices()->getMachineRegistryProductRootKey();
-#endif
-
-  if (pszKey && pszKey[0])
+  AcDbHostApplicationServices* pServices = acdbHostApplicationServices();
+  if (pServices)
   {
-    CRegKey reg;
-    long rc = reg.Open(HKEY_LOCAL_MACHINE, pszKey, KEY_READ);
-    if (rc == ERROR_SUCCESS)
-    {
-      CString str;
-      ULONG num_chars = _MAX_PATH;
-      rc = reg.QueryStringValue(L"ProductName", str.GetBuffer(num_chars), &num_chars);
-      str.ReleaseBuffer();
-      reg.Close();
-      if (rc == ERROR_SUCCESS && !str.IsEmpty())
-      {
-        acedRetStr(str);
-        return RSRSLT;
-      }
-    }
+    CString str;
+    str.Format(L"%ls %ls", pServices->product(), pServices->versionString());
+    acedRetStr(str);
   }
-
-  acedRetNil();
-
+  else
+  {
+    acedRetNil();
+  }
   return RSRSLT;
 }
 
