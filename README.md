@@ -24,27 +24,13 @@ The DOSLib build solution looks for ObjectARX, BRXSDK and ZRXSDK installations i
 ```
 \acad
   \arx
-    \19    - ObjectARX for AutoCAD 2013
-    \20    - ObjectARX for AutoCAD 2015 
-    \21    - ObjectARX for AutoCAD 2017 
-    \22    - ObjectARX for AutoCAD 2018
     \23    - ObjectARX for AutoCAD 2019
     \24    - ObjectARX for AutoCAD 2021
   \brx
-    \13    - BRXSDK for BricsCAD Pro V13 
-    \14    - BRXSDK for BricsCAD Pro V14
-    \15    - BRXSDK for BricsCAD Pro V15 
-    \16    - BRXSDK for BricsCAD Pro V16 
-    \17    - BRXSDK for BricsCAD Pro V17 
-    \18    - BRXSDK for BricsCAD Pro V18 
-    \19    - BRXSDK for BricsCAD Pro V19 
-    \20    - BRXSDK for BricsCAD Pro V20
     \21    - BRXSDK for BricsCAD Pro V21
     \22    - BRXSDK for BricsCAD Pro V22
     \23    - BRXSDK for BricsCAD Pro V23
-\zwcad
-  \zrx
-    \20    - ZRXSDK for ZWCAD 2018/2019/2020
+   \zrx
     \21    - ZRXSDK for ZWCAD 2021
 ```
 

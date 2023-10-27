@@ -13,7 +13,8 @@
 class CDosScreenImage : public CImage
 {
 public:
-  BOOL CaptureRect(const CRect& rect) throw();
-  BOOL CaptureScreen() throw();
-  BOOL CaptureWindow(HWND hWnd) throw();
+  BOOL CaptureRect(const CRect& rect);
+  BOOL CaptureScreen();
+  BOOL CaptureWindow(HWND hWnd);
+  BOOL CaptureWindow(CWnd* pWnd);
 };

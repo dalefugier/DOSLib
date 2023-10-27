@@ -851,7 +851,7 @@ int CDOSLibApp::ads_dos_printscrn()
   CDosScreenImage image;
   if (0 == type)
   {
-    // Capture primary screen
+    // Capture screen
     rc = image.CaptureScreen();
   }
   else if (1 == type)
