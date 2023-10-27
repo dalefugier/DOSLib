@@ -12,12 +12,14 @@ Global
 		Debug_BRX21|x64 = Debug_BRX21|x64
 		Debug_BRX22|x64 = Debug_BRX22|x64
 		Debug_BRX23|x64 = Debug_BRX23|x64
+		Debug_BRX24|x64 = Debug_BRX24|x64
 		Debug_ZRX21|x64 = Debug_ZRX21|x64
 		Release_ARX23|x64 = Release_ARX23|x64
 		Release_ARX24|x64 = Release_ARX24|x64
 		Release_BRX21|x64 = Release_BRX21|x64
 		Release_BRX22|x64 = Release_BRX22|x64
 		Release_BRX23|x64 = Release_BRX23|x64
+		Release_BRX24|x64 = Release_BRX24|x64
 		Release_ZRX21|x64 = Release_ZRX21|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
@@ -31,6 +33,8 @@ Global
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Debug_BRX22|x64.Build.0 = Debug_BRX22|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Debug_BRX23|x64.ActiveCfg = Debug_BRX23|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Debug_BRX23|x64.Build.0 = Debug_BRX23|x64
+		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Debug_BRX24|x64.ActiveCfg = Debug_BRX24|x64
+		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Debug_BRX24|x64.Build.0 = Debug_BRX24|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Debug_ZRX21|x64.ActiveCfg = Debug_ZRX21|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Debug_ZRX21|x64.Build.0 = Debug_ZRX21|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_ARX23|x64.ActiveCfg = Release_ARX23|x64
@@ -43,6 +47,8 @@ Global
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_BRX22|x64.Build.0 = Release_BRX22|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_BRX23|x64.ActiveCfg = Release_BRX23|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_BRX23|x64.Build.0 = Release_BRX23|x64
+		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_BRX24|x64.ActiveCfg = Release_BRX24|x64
+		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_BRX24|x64.Build.0 = Release_BRX24|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_ZRX21|x64.ActiveCfg = Release_ZRX21|x64
 		{745E02ED-EAAC-41FC-80D7-65BD3C1EB304}.Release_ZRX21|x64.Build.0 = Release_ZRX21|x64
 	EndGlobalSection

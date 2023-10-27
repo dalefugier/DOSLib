@@ -14,7 +14,7 @@
 
 CDosComboBox::CDosComboBox()
   : CComboBox()
-  , m_pEdit(0)
+  , m_pEdit(NULL)
 {
 }
 
