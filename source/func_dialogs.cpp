@@ -1605,7 +1605,7 @@ int CDOSLibApp::ads_dos_msgboxchk()
   Returns:
     true or false
 */
-#if defined(ZRX20) || defined(ZRX21)
+#if defined(ZRX20) || defined(ZRX21) || defined(ZRX25)
 #define acedLinetypeDialog zcedLinetypeDialog
 #endif
 bool __cdecl acedLinetypeDialog(
