@@ -1304,7 +1304,7 @@ const wchar_t* DOS_PlatformName()
 
 int DOS_FindFile(const wchar_t* fname, wchar_t* result, size_t nBufLen)
 {
-#if _ARX_VER > 19 ||_BRX_VER > 16
+#if _ARX_VER > 19 || _BRX_VER > 16 || _ZRX_VER > 21
   return acedFindFile(fname, result, nBufLen);
 #else
   return acedFindFile(fname, result);

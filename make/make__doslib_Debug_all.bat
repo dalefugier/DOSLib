@@ -38,3 +38,11 @@ call make_doslib.bat Debug_BRX19 x64 rebuild %1 %2 %3 %4 %5 %6
 
 call make_doslib.bat Debug_BRX20 Win32 rebuild %1 %2 %3 %4 %5 %6
 call make_doslib.bat Debug_BRX20 x64 rebuild %1 %2 %3 %4 %5 %6
+
+call make_doslib.bat Debug_ZRX20 Win32 rebuild %1 %2 %3 %4 %5 %6
+call make_doslib.bat Debug_ZRX20 x64 rebuild %1 %2 %3 %4 %5 %6
+
+call make_doslib.bat Debug_ZRX21 Win32 rebuild %1 %2 %3 %4 %5 %6
+call make_doslib.bat Debug_ZRX21 x64 rebuild %1 %2 %3 %4 %5 %6
+
+call make_doslib.bat Debug_ZRX25 x64 rebuild %1 %2 %3 %4 %5 %6
