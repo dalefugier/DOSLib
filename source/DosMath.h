@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DosMath.h
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -77,8 +77,9 @@ double _normalize(double t0, double t1, double t);
 double _parameterize(double t0, double t1, double x);
 int _quadratic(double a, double b, double c, double* r0, double* r1);
 
+// OBSOLETE
 // Calculates the cube root.
-double cbrt(double x);
+//double cbrt(double x);
 
 // Is prime number
 bool IsPrime(int n);

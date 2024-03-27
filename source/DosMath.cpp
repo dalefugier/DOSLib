@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DosMath.cpp
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -896,14 +896,14 @@ int _quadratic(double a, double b, double c, double *r0, double *r1)
   return 0;
 }
 
-double cbrt(double x)
-{
-  if (fabs(x) < DBL_EPSILON)
-    return 0.0;
-  if (x > 0.0)
-    return pow(x, 1.0 / 3.0);
-  return -pow(-x, 1.0 / 3.0);
-}
+//double cbrt(double x)
+//{
+//  if (fabs(x) < DBL_EPSILON)
+//    return 0.0;
+//  if (x > 0.0)
+//    return pow(x, 1.0 / 3.0);
+//  return -pow(-x, 1.0 / 3.0);
+//}
 
 bool IsPrime(int n)
 {

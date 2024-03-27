@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 // func_strings.cpp
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -1022,25 +1022,25 @@ int CDOSLibApp::ads_dos_strischar()
 
   BOOL rc = TRUE;
   if (test & 1) // Alphanumeric
-    rc = rc & (_istalnum(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istalnum(ch) == 0) ? FALSE : TRUE;
   if (test & 2) // Alphabetic
-    rc = rc & (_istalpha(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istalpha(ch) == 0) ? FALSE : TRUE;
   if (test & 4) // Decimal digit
-    rc = rc & (_istdigit(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istdigit(ch) == 0) ? FALSE : TRUE;
   if (test & 8) // Printable
-    rc = rc & (_istprint(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istprint(ch) == 0) ? FALSE : TRUE;
   if (test & 16) // Punctuation
-    rc = rc & (_istpunct(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istpunct(ch) == 0) ? FALSE : TRUE;
   if (test & 32) // White-space
-    rc = rc & (_istspace(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istspace(ch) == 0) ? FALSE : TRUE;
   if (test & 64) // Lowercase
-    rc = rc & (_istlower(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istlower(ch) == 0) ? FALSE : TRUE;
   if (test & 128) // Uppercase
-    rc = rc & (_istupper(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istupper(ch) == 0) ? FALSE : TRUE;
   if (test & 256) // ASCII
-    rc = rc & (_istascii(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istascii(ch) == 0) ? FALSE : TRUE;
   if (test & 512) // Control
-    rc = rc & (_istcntrl(ch) == 0) ? FALSE : TRUE;
+    rc = rc && (_istcntrl(ch) == 0) ? FALSE : TRUE;
 
   if (rc)
     acedRetT();

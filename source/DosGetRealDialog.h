@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DosGetRealDialog.h
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -29,8 +29,8 @@ public:
   void SetAllowEmpty(BOOL b = TRUE) { m_bAllowEmpty = b; };
   void SetAllowZero(BOOL b = TRUE) { m_bAllowZero = b; };
   void SetAllowNegative(BOOL b = TRUE) { m_bAllowNeg = b; };
-  void SetMin(double d = 0.0) { m_dblMin = d; m_bMin = TRUE; };
-  void SetMax(double d = 0.0) { m_dblMax = d; m_bMax = TRUE; };
+  void SetMin(double d = DBL_MIN) { m_dblMin = d; m_bMin = TRUE; };
+  void SetMax(double d = DBL_MAX) { m_dblMax = d; m_bMax = TRUE; };
 
   double Value() { return m_dblValue; };
   BOOL IsEmpty() { return m_bIsEmpty; };

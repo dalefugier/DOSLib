@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DOSLibApp.h
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -15,7 +15,6 @@ class CDOSLibApp : public AcRxArxApp
 {
 public:
   CDOSLibApp();
-  ~CDOSLibApp();
 
   // Required overrides
   virtual AcRx::AppRetCode On_kInitAppMsg(void* pkt);
@@ -44,9 +43,9 @@ public:
 
 private:
   CString m_strHelpPath;
-  int m_nMajorVersion;
-  int m_nMinorVersion;
-  int m_nServiceRelease;
+  const int m_nMajorVersion = 9;
+  const int m_nMinorVersion = 1;
+  const int m_nServiceRelease = 1;
   CString m_strVersion;
 
 public:
@@ -209,7 +208,6 @@ public:
   static int ads_dos_orderlist();
   static int ads_dos_duallist();
   static int ads_dos_htmldialog();
-  //static int ads_dos_notepad();
 
   // String functions
   static int ads_dos_strcase();

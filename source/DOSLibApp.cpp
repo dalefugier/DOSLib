@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DOSLibApp.cpp
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -20,25 +20,17 @@ IMPLEMENT_ARX_ENTRYPOINT(CDOSLibApp)
 CDOSLibApp& DOSLibApp()
 {
   AcRxDbxApp* pDbx = acrxGetApp();
-  ASSERT(pDbx != NULL);
+  ASSERT(pDbx != nullptr);
   CDOSLibApp* pDosLib = (CDOSLibApp*)pDbx;
-  ASSERT(pDosLib != NULL);
+  ASSERT(pDosLib != nullptr);
   return *pDosLib;
 }
 
 CDOSLibApp::CDOSLibApp()
   : AcRxArxApp()
 {
-  m_strHelpPath = L"";
-  m_nMajorVersion = 9;
-  m_nMinorVersion = 1;
-  m_nServiceRelease = 0;
-  m_strVersion = L"9.1.0";
-  srand((unsigned)time(0));
-}
-
-CDOSLibApp::~CDOSLibApp()
-{
+  m_strVersion.Format(L"%d.%d.%d", m_nMajorVersion, m_nMinorVersion, m_nServiceRelease);
+  srand((unsigned)time(nullptr));
 }
 
 AcRx::AppRetCode CDOSLibApp::On_kInitAppMsg(void* pkt)
@@ -114,7 +106,7 @@ const wchar_t* CDOSLibApp::AppVersion() const
 
 const wchar_t* CDOSLibApp::AppCopyright() const
 {
-  return L"Copyright (c) 1992-2020 Robert McNeel & Associates.";
+  return L"Copyright (c) 1992-2023 Robert McNeel & Associates.";
 }
 
 int CDOSLibApp::MajorVersion() const
@@ -134,7 +126,7 @@ int CDOSLibApp::ServiceRelease() const
 
 const wchar_t* CDOSLibApp::AppInternet() const
 {
-  return L"https://wiki.mcneel.com/doslib/home";
+  return L"https://github.com/dalefugier/DOSLib";
 }
 
 CString CDOSLibApp::AppRegKey()
@@ -442,7 +434,6 @@ DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_getdate, false)
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_orderlist, false)
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_duallist, false)
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_htmldialog, false)
-//DOS_ADSSYMBOL_ENTRY_AUTO( CDOSLibApp, dos_notepad, false )
 
 // String functions
 DOS_ADSSYMBOL_ENTRY_AUTO(CDOSLibApp, dos_strcase, false)

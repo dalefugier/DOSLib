@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DosScreenImage.cpp
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -14,36 +14,47 @@
 
 BOOL CDosScreenImage::CaptureRect(const CRect& rect)
 {
-  // Detach and destroy the old bitmap if any attached
+  // detach and destroy the old bitmap if any attached
   CImage::Destroy();
 
-  // Create a screen and a memory device context
-  HDC hDCScreen = ::CreateDC(L"DISPLAY", 0, 0, 0);
-  HDC hDCMem = ::CreateCompatibleDC(hDCScreen);
+  // get the desktop device context
+  HDC hDC = ::GetDC(NULL);
 
-  // Create a compatible bitmap and select it in the memory DC
-  HBITMAP hBitmap = ::CreateCompatibleBitmap(hDCScreen, rect.Width(), rect.Height());
-  HBITMAP hBmpOld = (HBITMAP)::SelectObject(hDCMem, hBitmap);
+  // create a device context
+  HDC hDest = ::CreateCompatibleDC(hDC);
 
-  // Bit-blit from screen to memory device context
-  // Note: CAPTUREBLT flag is required to capture layered windows
-  DWORD dwRop = SRCCOPY | CAPTUREBLT;
-  BOOL rc = ::BitBlt(hDCMem, 0, 0, rect.Width(), rect.Height(), hDCScreen, rect.left, rect.top, dwRop);
+  // create a bitmap
+  HBITMAP hBitmap = ::CreateCompatibleBitmap(hDC, rect.Width(), rect.Height());
 
-  // Attach bitmap handle to this object
+  // select the bitmap
+  HBITMAP hOld = (HBITMAP)::SelectObject(hDest, hBitmap);
+
+  // copy from the desktop device context to the bitmap device context
+  BOOL rc = ::BitBlt(hDest, 0, 0, rect.Width(), rect.Height(), hDC, rect.left, rect.top, SRCCOPY | CAPTUREBLT);
+
+  // attach bitmap handle to this object
   Attach(hBitmap);
 
-  // Restore the memory DC and perform cleanup
-  ::SelectObject(hDCMem, hBmpOld);
-  ::DeleteDC(hDCMem);
-  ::DeleteDC(hDCScreen);
+  // restore the old object
+  ::SelectObject(hDest, hOld);
 
+  // delete the device context
+  ::DeleteDC(hDest);
+
+  // release the desktop device context
+  ::ReleaseDC(NULL, hDC);
+ 
   return rc;
 }
 
 BOOL CDosScreenImage::CaptureScreen()
 {
-  CRect rect(0, 0, ::GetSystemMetrics(SM_CXSCREEN), ::GetSystemMetrics(SM_CYSCREEN));
+  CRect rect(
+    0, 
+    0, 
+    ::GetSystemMetrics(SM_CXVIRTUALSCREEN),
+    ::GetSystemMetrics(SM_CYVIRTUALSCREEN)
+  );
   return CaptureRect(rect);
 }
 
@@ -59,3 +70,10 @@ BOOL CDosScreenImage::CaptureWindow(HWND hWnd)
   return rc;
 }
 
+BOOL CDosScreenImage::CaptureWindow(CWnd* pWnd)
+{
+  BOOL rc = FALSE;
+  if (pWnd)
+    rc = CaptureWindow(pWnd->GetSafeHwnd());
+  return rc;
+}

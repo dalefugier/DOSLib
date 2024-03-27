@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DosScreenImage.h
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -13,7 +13,8 @@
 class CDosScreenImage : public CImage
 {
 public:
-  BOOL CaptureRect(const CRect& rect) throw();
-  BOOL CaptureScreen() throw();
-  BOOL CaptureWindow(HWND hWnd) throw();
+  BOOL CaptureRect(const CRect& rect);
+  BOOL CaptureScreen();
+  BOOL CaptureWindow(HWND hWnd);
+  BOOL CaptureWindow(CWnd* pWnd);
 };

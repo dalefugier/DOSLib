@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // func_autocad.cpp
 //
-// Copyright (c) 1992-2020, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -14,7 +14,7 @@
 #include "DosLayerListDialog.h"
 #include "DosStringArray.h"
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(BRX19)  || defined(BRX20)
+#if _ARX_VER > 20 || _BRX_VER > 18
 extern int acdbSetDbmod(class AcDbDatabase* pDb, int newVal);
 #else
 extern long acdbSetDbmod(class AcDbDatabase* pDb, long newVal);
@@ -2985,33 +2985,17 @@ int CDOSLibApp::ads_dos_plinewinding()
 // dos_acadname
 int CDOSLibApp::ads_dos_acadname()
 {
-#ifdef BRX13
-  const wchar_t* pszKey = acdbHostApplicationServices()->getRegistryProductRootKey();
-#else
-  const wchar_t* pszKey = acdbHostApplicationServices()->getMachineRegistryProductRootKey();
-#endif
-
-  if (pszKey && pszKey[0])
+  AcDbHostApplicationServices* pServices = acdbHostApplicationServices();
+  if (pServices)
   {
-    CRegKey reg;
-    long rc = reg.Open(HKEY_LOCAL_MACHINE, pszKey, KEY_READ);
-    if (rc == ERROR_SUCCESS)
-    {
-      CString str;
-      ULONG num_chars = _MAX_PATH;
-      rc = reg.QueryStringValue(L"ProductName", str.GetBuffer(num_chars), &num_chars);
-      str.ReleaseBuffer();
-      reg.Close();
-      if (rc == ERROR_SUCCESS && !str.IsEmpty())
-      {
-        acedRetStr(str);
-        return RSRSLT;
-      }
-    }
+    CString str;
+    str.Format(L"%ls %ls", pServices->product(), pServices->versionString());
+    acedRetStr(str);
   }
-
-  acedRetNil();
-
+  else
+  {
+    acedRetNil();
+  }
   return RSRSLT;
 }
 
