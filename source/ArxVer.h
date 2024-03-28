@@ -23,6 +23,8 @@
 #define _ARX_VER 23
 #elif defined(ARX24)
 #define _ARX_VER 24
+#elif defined(ARX25)
+#define _ARX_VER 25
 #else
 #define _ARX_VER 0
 #endif

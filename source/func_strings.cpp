@@ -328,14 +328,19 @@ int CDOSLibApp::ads_dos_strreplace()
 
   args.Next();
 
+  // 28-Mar-2024, https://github.com/dalefugier/DOSLib/issues/34
+
   if (args.IsEmpty())
   {
-    str.Replace(strOld, strNew);
+    if (strOld.Compare(strNew) != 0)
+      str.Replace(strOld, strNew);
     acedRetStr(str);
   }
   else
   {
-    acedRetStr(DOS_ReplaceNoCase(str, strOld, strNew));
+    if (strOld.CompareNoCase(strNew) != 0)
+      str = DOS_ReplaceNoCase(str, strOld, strNew);
+    acedRetStr(str);
   }
 
   return RSRSLT;

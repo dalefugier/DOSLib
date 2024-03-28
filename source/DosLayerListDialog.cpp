@@ -245,8 +245,9 @@ void CDosLayerListDialog::FillListBox()
     status = pIterator->getRecord(pRecord, AcDb::kForRead);
     if (Acad::eOk == status)
     {
-      wchar_t* pName = NULL;
-      pRecord->getName(pName);
+      AcString name;
+      pRecord->getName(name);
+
       AcCmColor color = pRecord->color();
 
       bool bDisplayLayer = true;
@@ -292,15 +293,15 @@ void CDosLayerListDialog::FillListBox()
         bDisplayLayer = false;
 
       // If the layer is used
-      if (m_hide_used_layers && IsUsedLayer(pName))
+      if (m_hide_used_layers && IsUsedLayer(name))
         bDisplayLayer = false;
 
       // If the layer is unused
-      if (m_hide_unused_layers && IsUnusedLayer(pName))
+      if (m_hide_unused_layers && IsUnusedLayer(name))
         bDisplayLayer = false;
 
       if (bDisplayLayer)
-        m_listbox.AddString(pName, acedGetRGB(color.colorIndex()));
+        m_listbox.AddString(name, acedGetRGB(color.colorIndex()));
     }
 
     pRecord->close();
@@ -361,7 +362,7 @@ bool CDosLayerListDialog::GetLayerName(const AcDbObjectId& id, CString& strName)
     return rc;
   }
 
-  wchar_t* name = NULL;
+  AcString name;
   layerTableRecord->getName(name);
   layerTableRecord->close();
 

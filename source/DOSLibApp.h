@@ -45,7 +45,7 @@ private:
   CString m_strHelpPath;
   const int m_nMajorVersion = 9;
   const int m_nMinorVersion = 1;
-  const int m_nServiceRelease = 1;
+  const int m_nServiceRelease = 2;
   CString m_strVersion;
 
 public:

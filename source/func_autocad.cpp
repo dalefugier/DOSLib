@@ -241,29 +241,23 @@ int CDOSLibApp::ads_dos_layerlistbox()
 // dos_closeall
 int CDOSLibApp::ads_dos_closeall()
 {
-  AcApDocumentIterator* pIterator = acDocManager->newAcApDocumentIterator();
-  if (!pIterator)
-    return RSERR;
+  // 28-Mar-2024, https://github.com/dalefugier/DOSLib/issues/33
 
-  AcApDocument* pDoc = 0;
-  for (; !pIterator->done(); pIterator->step())
+  // Close the other documents
+  AcApDocumentIterator* pIterator = acDocManager->newAcApDocumentIterator();
+  if (pIterator)
   {
-    pDoc = pIterator->document();
-    if (pDoc)
-      acDocManager->sendStringToExecute(pDoc, L"\3\3_.close", false, true);
-    else
+    while (!pIterator->done())
     {
-      delete pIterator;
-      pIterator = 0;
-      return RSERR;
+      if (pIterator->document() != acDocManager->curDocument())
+        acDocManager->closeDocument(pIterator->document());
+      pIterator->step();
     }
+    delete pIterator;
   }
 
-  delete pIterator;
-  pIterator = 0;
-
-  acedRetNil();
-
+  // Now close the current document
+  ::acDocManagerPtr()->appContextCloseDocument(acDocManager->curDocument());
   return RSRSLT;
 }
 
@@ -825,7 +819,7 @@ int CDOSLibApp::ads_dos_xreflist()
   bool bReadOnly = false;
   AcDbDatabase db(Adesk::kFalse);
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25)
   Acad::ErrorStatus es = db.readDwgFile(strPath, AcDbDatabase::kForReadAndReadShare, false);
 #else
   Acad::ErrorStatus es = db.readDwgFile(strPath, _SH_DENYWR, false);
@@ -847,7 +841,7 @@ int CDOSLibApp::ads_dos_xreflist()
         return RSRSLT;
       }
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25)
       es = db.readDwgFile(tchTempName, AcDbDatabase::kForReadAndReadShare, false);
 #else
       es = db.readDwgFile(tchTempName, _SH_DENYWR, false);
@@ -1927,7 +1921,7 @@ int CDOSLibApp::ads_dos_hatcharea()
   for (i = 0; i < loop_count; i++)
   {
     double area = 0.0;
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ZRX20) || defined(ZRX21) || defined(ZRX25)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ZRX20) || defined(ZRX21) || defined(ZRX25)
     Adesk::Int32 loopType = 0;
 #else
     long loopType = 0;
@@ -2006,7 +2000,7 @@ ACHAR* g_result = 0; // global result
 int g_length = 0;    // global result length
 int g_cronly = 0;    // global cronly
 
-#if defined(ARX23) || defined(ARX24) || defined(ZRX21) || defined(ZRX25)
+#if defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ZRX21) || defined(ZRX25)
 static bool MessageFilter(MSG* pMsg)
 #else
 static BOOL MessageFilter(MSG* pMsg)
