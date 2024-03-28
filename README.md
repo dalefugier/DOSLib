@@ -8,14 +8,12 @@ This repository contains the source code to DOSLib, a library of LISP-callable f
 
 The following tools are required to build DOSLib:
 
-- [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/). Visual Studio 2019 comes in three editions: Community (free), Professional, and Enterprise. All of these editions will work.
+- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/).
 - [ObjectARX SDK for AutoCAD](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx-license-download).
 - [BRX SDK for BricsCAD](https://www.bricsys.com/en-eu/applications/developers/).
 - [ZRX SDK for ZWCAD](https://www.zwsoft.com/support/zwcad-devdoc/). (Requires Visual Studio 2017*)
 
-*When installing Visual Studio 2019, make sure to install the Visual Studio 2017 (v141) C++ x64/x86 build tools and libraries, including ATL and MFC. 
-
-Note, Visual Studio 2022 can also be used.  Just make sure to install the Visual Studio 2019 (v142) and Visual Studio 2017 (v141) C++ x64/x86 build tools and libraries, including ATL and MFC.
+*When installing Visual Studio 2022, make sure to install the Visual Studio 2019 (v142) and isual Studio 2017 (v141) C++ x64/x86 build tools and libraries, including ATL and MFC. 
 
 Note, to build DOSLib for version of AutoCAD, BricsCAD and/or ZWCAD earlier than what is listed above may also require an earlier version of Visual Studio. Check the documentation that comes with each of these SDK for their Visual Studio requirement.
 
@@ -26,6 +24,7 @@ The DOSLib build solution looks for ObjectARX, BRXSDK and ZRXSDK installations i
   \arx
     \23    - ObjectARX for AutoCAD 2019
     \24    - ObjectARX for AutoCAD 2021
+    \25    - ObjectARX for AutoCAD 2025
   \brx
     \21    - BRXSDK for BricsCAD Pro V21
     \22    - BRXSDK for BricsCAD Pro V22
