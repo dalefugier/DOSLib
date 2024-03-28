@@ -13,7 +13,7 @@ The following tools are required to build DOSLib:
 - [BRX SDK for BricsCAD](https://www.bricsys.com/en-eu/applications/developers/)
 - [ZRX SDK for ZWCAD](https://www.zwsoft.com/support/zwcad-devdoc/) (Requires Visual Studio 2017*)
 
-*When installing Visual Studio 2022, make sure to install the Visual Studio 2019 (v142) and isual Studio 2017 (v141) C++ x64/x86 build tools and libraries, including ATL and MFC. 
+When installing Visual Studio 2022, make sure to install the Visual Studio 2019 (v142) and Visual Studio 2017 (v141) C++ x64/x86 build tools and libraries, including ATL and MFC. 
 
 Note, to build DOSLib for version of AutoCAD, BricsCAD and/or ZWCAD earlier than what is listed above may also require an earlier version of Visual Studio. Check the documentation that comes with each of these SDK for their Visual Studio requirement.
 
