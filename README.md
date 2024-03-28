@@ -8,10 +8,10 @@ This repository contains the source code to DOSLib, a library of LISP-callable f
 
 The following tools are required to build DOSLib:
 
-- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/).
-- [ObjectARX SDK for AutoCAD](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx-license-download).
-- [BRX SDK for BricsCAD](https://www.bricsys.com/en-eu/applications/developers/).
-- [ZRX SDK for ZWCAD](https://www.zwsoft.com/support/zwcad-devdoc/). (Requires Visual Studio 2017*)
+- [Microsoft Visual Studio 2022](https://visualstudio.microsoft.com/)
+- [ObjectARX SDK for AutoCAD](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx-license-download)
+- [BRX SDK for BricsCAD](https://www.bricsys.com/en-eu/applications/developers/)
+- [ZRX SDK for ZWCAD](https://www.zwsoft.com/support/zwcad-devdoc/) (Requires Visual Studio 2017*)
 
 *When installing Visual Studio 2022, make sure to install the Visual Studio 2019 (v142) and isual Studio 2017 (v141) C++ x64/x86 build tools and libraries, including ATL and MFC. 
 
