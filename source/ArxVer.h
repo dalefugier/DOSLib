@@ -53,6 +53,8 @@
 #define _BRX_VER 23
 #elif defined(BRX24)
 #define _BRX_VER 24
+#elif defined(BRX25)
+#define _BRX_VER 25
 #else
 #define _BRX_VER 0
 #endif
