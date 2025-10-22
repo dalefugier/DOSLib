@@ -106,7 +106,7 @@ const wchar_t* CDOSLibApp::AppVersion() const
 
 const wchar_t* CDOSLibApp::AppCopyright() const
 {
-  return L"Copyright (c) 1992-2024 Robert McNeel & Associates.";
+  return L"Copyright (c) 1992-2025 Robert McNeel & Associates.";
 }
 
 int CDOSLibApp::MajorVersion() const

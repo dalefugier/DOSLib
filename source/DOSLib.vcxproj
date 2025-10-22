@@ -33,6 +33,10 @@
       <Configuration>Debug_BRX25</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_BRX26|x64">
+      <Configuration>Debug_BRX26</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug_ZRX21|x64">
       <Configuration>Debug_ZRX21</Configuration>
       <Platform>x64</Platform>
@@ -71,6 +75,10 @@
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release_BRX25|x64">
       <Configuration>Release_BRX25</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_BRX26|x64">
+      <Configuration>Release_BRX26</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release_ZRX21|x64">
@@ -148,6 +156,12 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -208,6 +222,12 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -241,6 +261,9 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_BRX25|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -271,6 +294,9 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_BRX25|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
@@ -284,6 +310,7 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">..\bin\Debug\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX24|x64'">..\bin\Debug\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX25|x64'">..\bin\Debug\brx\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'">..\bin\Debug\brx\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX25|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">$(Platform)\$(Configuration)\</IntDir>
@@ -294,6 +321,7 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX24|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX25|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'">$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX25|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">true</LinkIncremental>
@@ -304,6 +332,7 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX24|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX25|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">..\bin\Release\zrx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX25|x64'">..\bin\Release\zrx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">..\bin\Release\arx\</OutDir>
@@ -314,6 +343,7 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">..\bin\Release\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX24|x64'">..\bin\Release\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX25|x64'">..\bin\Release\brx\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'">..\bin\Release\brx\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ZRX25|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">$(Platform)\$(Configuration)\</IntDir>
@@ -324,6 +354,7 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX24|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX25|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'">$(Platform)\$(Configuration)\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ZRX25|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">true</LinkIncremental>
@@ -334,6 +365,7 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX24|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX25|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'">true</LinkIncremental>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX25|x64'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">.arx</TargetExt>
@@ -344,6 +376,7 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX24|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX25|x64'">.brx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ZRX25|x64'">.zrx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">.arx</TargetExt>
@@ -354,6 +387,7 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX24|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX25|x64'">.brx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'">.brx</TargetExt>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ZRX25|x64'">$(ProjectName)25$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">$(ProjectName)23$(Platform)</TargetName>
@@ -364,6 +398,7 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">$(ProjectName)23$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX24|x64'">$(ProjectName)24$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX25|x64'">$(ProjectName)25$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'">$(ProjectName)26$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX25|x64'">$(ProjectName)25$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">$(ProjectName)23$(Platform)</TargetName>
@@ -374,6 +409,7 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">$(ProjectName)23$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_BRX24|x64'">$(ProjectName)24$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_BRX25|x64'">$(ProjectName)25$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'">$(ProjectName)26$(Platform)</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ZRX21|x64'">
     <Midl>
@@ -794,6 +830,49 @@
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>\acad\brx\25\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>\acad\brx\26\inc;\acad\brx\26\inc64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_BRX;BRX26;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_BRX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\acad\brx\26\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -1253,6 +1332,50 @@
       </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>\acad\brx\26\inc;\acad\brx\26\inc64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;NDEBUG;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_BRX;BRX26;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;_BRX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\acad\brx\26\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DosAboutDialog.cpp" />
     <ClCompile Include="DosAdsHelpers.cpp" />
@@ -1339,6 +1462,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_BRX24|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_BRX25|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_BRX26|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ZRX21|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ZRX25|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">Create</PrecompiledHeader>
@@ -1349,6 +1473,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_BRX24|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_BRX25|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_BRX26|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="ToasterWnd.cpp" />
     <ClCompile Include="Webbrowser2.cpp" />
