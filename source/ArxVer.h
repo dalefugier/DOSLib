@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // ArxVer.h
 //
-// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2026, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -25,6 +25,8 @@
 #define _ARX_VER 24
 #elif defined(ARX25)
 #define _ARX_VER 25
+#elif defined(ARX26)
+#define _ARX_VER 26
 #else
 #define _ARX_VER 0
 #endif

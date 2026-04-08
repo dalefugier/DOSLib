@@ -13,6 +13,10 @@
       <Configuration>Debug_ARX25</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_ARX26|x64">
+      <Configuration>Debug_ARX26</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug_BRX21|x64">
       <Configuration>Debug_BRX21</Configuration>
       <Platform>x64</Platform>
@@ -55,6 +59,10 @@
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release_ARX25|x64">
       <Configuration>Release_ARX25</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_ARX26|x64">
+      <Configuration>Release_ARX26</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release_BRX21|x64">
@@ -126,6 +134,12 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -192,6 +206,12 @@
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v145</PlatformToolset>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
@@ -246,6 +266,9 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_ARX25|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -279,6 +302,9 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ARX25|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -305,6 +331,7 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">..\bin\Debug\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX24|x64'">..\bin\Debug\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX25|x64'">..\bin\Debug\arx\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'">..\bin\Debug\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'">..\bin\Debug\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX22|x64'">..\bin\Debug\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">..\bin\Debug\brx\</OutDir>
@@ -316,6 +343,7 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX24|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX25|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX22|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">$(Platform)\$(Configuration)\</IntDir>
@@ -327,6 +355,7 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX24|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX25|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX22|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">true</LinkIncremental>
@@ -338,6 +367,7 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">..\bin\Release\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX24|x64'">..\bin\Release\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX25|x64'">..\bin\Release\arx\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'">..\bin\Release\arx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'">..\bin\Release\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX22|x64'">..\bin\Release\brx\</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">..\bin\Release\brx\</OutDir>
@@ -349,6 +379,7 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX24|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX25|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX22|x64'">$(Platform)\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">$(Platform)\$(Configuration)\</IntDir>
@@ -360,6 +391,7 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX24|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX25|x64'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX22|x64'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">true</LinkIncremental>
@@ -371,6 +403,7 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX24|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX25|x64'">.arx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX22|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">.brx</TargetExt>
@@ -382,6 +415,7 @@
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX24|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX25|x64'">.arx</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'">.arx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX22|x64'">.brx</TargetExt>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">.brx</TargetExt>
@@ -393,6 +427,7 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">$(ProjectName)23$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX24|x64'">$(ProjectName)24$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX25|x64'">$(ProjectName)25$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'">$(ProjectName)26$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX22|x64'">$(ProjectName)22$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">$(ProjectName)23$(Platform)</TargetName>
@@ -404,6 +439,7 @@
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">$(ProjectName)23$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX24|x64'">$(ProjectName)24$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX25|x64'">$(ProjectName)25$(Platform)</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'">$(ProjectName)26$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'">$(ProjectName)21$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_BRX22|x64'">$(ProjectName)22$(Platform)</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">$(ProjectName)23$(Platform)</TargetName>
@@ -594,7 +630,7 @@
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>\acad\arx\25\inc;\acad\arx\25\inc-x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
-      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ARX;ARX24;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ARX;ARX25;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>false</StringPooling>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -614,6 +650,51 @@
     <Link>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
       <AdditionalLibraryDirectories>\acad\arx\25\lib-x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>acgeoment.lib;AcPal.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>\acad\arx\26\inc;\acad\arx\26\inc-x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ARX;ARX26;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\acad\arx\26\lib-x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <LinkDLL>true</LinkDLL>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
@@ -1112,6 +1193,52 @@
       </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <AdditionalIncludeDirectories>\acad\arx\26\inc;\acad\arx\26\inc-x64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <PreprocessorDefinitions>WIN64;_WIN64;_WINDOWS;NDEBUG;DOSLIB_MODULE;_AFXEXT;_ACRXAPP;_ARX;ARX25;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>\acad\arx\26\lib-x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <LinkDLL>true</LinkDLL>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>acgeoment.lib;AcPal.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'">
     <Midl>
       <TargetEnvironment>X64</TargetEnvironment>
@@ -1457,6 +1584,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX23|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX24|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX25|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_ARX26|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_BRX21|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_BRX22|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_BRX23|x64'">Create</PrecompiledHeader>
@@ -1468,6 +1596,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX23|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX24|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX25|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_ARX26|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_BRX21|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_BRX22|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_BRX23|x64'">Create</PrecompiledHeader>

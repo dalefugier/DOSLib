@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // func_autocad.cpp
 //
-// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2026, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -819,7 +819,7 @@ int CDOSLibApp::ads_dos_xreflist()
   bool bReadOnly = false;
   AcDbDatabase db(Adesk::kFalse);
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ARX26)
   Acad::ErrorStatus es = db.readDwgFile(strPath, AcDbDatabase::kForReadAndReadShare, false);
 #else
   Acad::ErrorStatus es = db.readDwgFile(strPath, _SH_DENYWR, false);
@@ -841,7 +841,7 @@ int CDOSLibApp::ads_dos_xreflist()
         return RSRSLT;
       }
 
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ARX26)
       es = db.readDwgFile(tchTempName, AcDbDatabase::kForReadAndReadShare, false);
 #else
       es = db.readDwgFile(tchTempName, _SH_DENYWR, false);
@@ -1921,7 +1921,7 @@ int CDOSLibApp::ads_dos_hatcharea()
   for (i = 0; i < loop_count; i++)
   {
     double area = 0.0;
-#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ZRX20) || defined(ZRX21) || defined(ZRX25)
+#if defined(ARX21) || defined(ARX22) || defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ARX26) || defined(ZRX20) || defined(ZRX21) || defined(ZRX25)
     Adesk::Int32 loopType = 0;
 #else
     long loopType = 0;
@@ -2000,7 +2000,7 @@ ACHAR* g_result = 0; // global result
 int g_length = 0;    // global result length
 int g_cronly = 0;    // global cronly
 
-#if defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ZRX21) || defined(ZRX25)
+#if defined(ARX23) || defined(ARX24) || defined(ARX25) || defined(ARX26) || defined(ZRX21) || defined(ZRX25)
 static bool MessageFilter(MSG* pMsg)
 #else
 static BOOL MessageFilter(MSG* pMsg)

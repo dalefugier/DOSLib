@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DosDragListBox.cpp
 //
-// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2026, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.

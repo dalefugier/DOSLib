@@ -1,7 +1,7 @@
 /////////////////////////////////////////////////////////////////////////////
 // DOSLibApp.cpp
 //
-// Copyright (c) 1992-2023, Robert McNeel & Associates. All rights reserved.
+// Copyright (c) 1992-2026, Robert McNeel & Associates. All rights reserved.
 // DOSLib is a trademark of Robert McNeel & Associates.
 //
 // THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY.
@@ -106,7 +106,7 @@ const wchar_t* CDOSLibApp::AppVersion() const
 
 const wchar_t* CDOSLibApp::AppCopyright() const
 {
-  return L"Copyright (c) 1992-2025 Robert McNeel & Associates.";
+  return L"Copyright (c) 1992-2026 Robert McNeel & Associates.";
 }
 
 int CDOSLibApp::MajorVersion() const
