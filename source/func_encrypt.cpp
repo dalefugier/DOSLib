@@ -14,6 +14,18 @@
 
 #define KEYSIZE 512
 
+/// <summary>
+/// GetCell is called by Mutate to determine whether a specified cell is
+/// currently set to 0 or 1.
+/// </summary>
+/// <param name="pGrid">Pointer to grid</param>
+/// <param name="nWidth">Grid width</param>
+/// <param name="i">Cell's column number</param>
+/// <param name="j">Cell's row number</param>
+/// <returns>
+/// TRUE = Cell's value is 1
+/// FALSE = Cell's value is 0
+/// </returns>
 static BOOL GetCell(char* pGrid, UINT nWidth, UINT i, UINT j)
 {
   UINT nBitNumber = ((j * nWidth) + i) & 7;
@@ -21,6 +33,14 @@ static BOOL GetCell(char* pGrid, UINT nWidth, UINT i, UINT j)
   return(*(pGrid + nByteNumber) & (1 << nBitNumber)) ? TRUE : FALSE;
 }
 
+/// <summary>
+/// SetCell is called by Mutate to set a cell value to 0 or 1. 
+/// </summary>
+/// <param name="pGrid">Pointer to grid</param>
+/// <param name="nWidth"></param>
+/// <param name="i">Cell's column number</param>
+/// <param name="j">Cell's row number</param>
+/// <param name="bCellState">New cell value (TRUE = 1, FALSE = 0)</param>
 static void SetCell(char* pGrid, UINT nWidth, UINT i, UINT j, BOOL bCellState)
 {
   UINT nBitNumber = ((j * nWidth) + i) & 7;
@@ -31,6 +51,21 @@ static void SetCell(char* pGrid, UINT nWidth, UINT i, UINT j, BOOL bCellState)
     *(pGrid + nByteNumber) &= (~(1 << nBitNumber));
 }
 
+/// <summary>
+/// Mutate generates a mutated key from an input key using a cellular
+/// automaton process similar to the one that drives John Conway's Life,
+/// which was described in the October 1970 issue of Scientific American.
+/// Each bit in the input key represents a "cell" in a grid, and each cell
+/// is set to 1 or 0 according to its current state and the states of its
+/// neighbors.
+/// </summary>
+/// <param name="pInputKey">Pointer to input key</param>
+/// <param name="pOutputKey">Pointer to output key</param>
+/// <param name="nWidth">Grid width (in cells)</param>
+/// <param name="nHeight">Grid height (in cells)</param>
+/// <remarks>
+/// (nWidth * nHeight) must equal the key size in bits.
+/// </remarks>
 static void Mutate(char* pInputKey, char* pOutputKey, UINT nWidth, UINT nHeight)
 {
   UINT i, j;
@@ -77,6 +112,8 @@ static void Mutate(char* pInputKey, char* pOutputKey, UINT nWidth, UINT nHeight)
 
 ////////////////////////////////////////////////////////////////
 // dos_encrypt
+// 15-Apr-2026 Dale Fugier, https://github.com/dalefugier/DOSLib/issues/43
+
 int CDOSLibApp::ads_dos_encrypt()
 {
   CAdsArgs args;
@@ -115,6 +152,7 @@ int CDOSLibApp::ads_dos_encrypt()
   char* pKey = pFileData + KEYSIZE;
   char* pTemp = pKey + KEYSIZE;
 
+  // Replicate the password enough times to fill the key
   int i = 0, j = 0;
   while (i < KEYSIZE)
   {
@@ -124,11 +162,17 @@ int CDOSLibApp::ads_dos_encrypt()
       pKey[i++] = szPassword[j++];
   }
 
+  // Generate a series of "mutated" numbers from the key using a simple
+  // (but non-reversible) one-step cellular automaton process, and XOR the
+  // series into the key. Note: The numeric parameters passed to the Mutate
+  // function assume a 512-byte key size. If KEYSIZE changes, this statement
+  // must be changed, too.
   Mutate(pKey, pTemp, 64, 64);
   i = 0;
   while (i < KEYSIZE)
     pKey[i] ^= pTemp[i++];
 
+  // Generate a series of random numbers and XOR the series into the key.
   i = j = 0;
   while (i < (int)length)
     j += (int)szPassword[i++];
