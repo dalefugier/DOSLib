@@ -112,8 +112,6 @@ static void Mutate(char* pInputKey, char* pOutputKey, UINT nWidth, UINT nHeight)
 
 ////////////////////////////////////////////////////////////////
 // dos_encrypt
-// 15-Apr-2026 Dale Fugier, https://github.com/dalefugier/DOSLib/issues/43
-
 int CDOSLibApp::ads_dos_encrypt()
 {
   CAdsArgs args;
@@ -151,13 +149,13 @@ int CDOSLibApp::ads_dos_encrypt()
 
   char* pKey = pFileData + KEYSIZE;
   char* pTemp = pKey + KEYSIZE;
+  int i = 0, j = 0;
 
   // Replicate the password enough times to fill the key
-  int i = 0, j = 0;
   while (i < KEYSIZE)
   {
     int count = min((int)length, KEYSIZE - i);
-    int j = 0;
+    j = 0;
     while (j < count)
       pKey[i++] = szPassword[j++];
   }
@@ -170,7 +168,10 @@ int CDOSLibApp::ads_dos_encrypt()
   Mutate(pKey, pTemp, 64, 64);
   i = 0;
   while (i < KEYSIZE)
-    pKey[i] ^= pTemp[i++];
+  {
+    pKey[i] ^= pTemp[i];
+    i++;
+  }
 
   // Generate a series of random numbers and XOR the series into the key.
   i = j = 0;
@@ -182,6 +183,7 @@ int CDOSLibApp::ads_dos_encrypt()
   while (i < KEYSIZE)
     pKey[i++] ^= (char)(rand() % 0x100);
 
+  // Open the file for reading and writing.
   HFILE hFile = _lopen(strPath, OF_READWRITE);
   if (hFile == HFILE_ERROR)
   {
@@ -190,9 +192,11 @@ int CDOSLibApp::ads_dos_encrypt()
     return RSRSLT;
   }
 
+  // Determine the file size.
   DWORD dwBytesRemaining = (DWORD)_llseek(hFile, 0, 2);
   _llseek(hFile, 0, 0);
 
+  // Encrypt or unencrypt the file.
   while (dwBytesRemaining)
   {
     DWORD nBytesToRead = min(KEYSIZE, dwBytesRemaining);
@@ -224,6 +228,7 @@ int CDOSLibApp::ads_dos_encrypt()
     dwBytesRemaining -= (DWORD)nBytesWritten;
   }
 
+  // Close the file and return.
   LocalFree((HLOCAL)pFileData);
   _lclose(hFile);
 
