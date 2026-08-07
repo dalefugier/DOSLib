@@ -60,5 +60,7 @@ Note, you can target DOSLib for other versions of AutoCAD, BricsCAD or ZWCAD as 
 
 [DOSLib home page](https://wiki.mcneel.com/doslib/home)
 
+[DOSLib online help](https://github.com/dalefugier/DOSLib/wiki)
+
 ### License
 Code licensed under the [MIT License](https://github.com/dalefugier/DOSLib/blob/master/LICENSE).
