@@ -1317,7 +1317,7 @@ int CDOSLibApp::ads_dos_mode()
 
   CAdsRetList result;
   for (i = 0; i < values.GetCount(); i++)
-    result.Add(d);
+    result.Add(values[i]);
 
   if (result.IsEmpty())
     acedRetNil();
